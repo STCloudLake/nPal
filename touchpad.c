@@ -5,7 +5,7 @@
 touchpad_info_t* tpinfo;
 #endif
 
-void initTP()//³õÊ¼»¯TP
+void initTP()//åˆå§‹åŒ–TP
 {        
 #ifdef TOUCHPAD_SUPPORT
         tpinfo = touchpad_getinfo();
@@ -14,21 +14,21 @@ void initTP()//³õÊ¼»¯TP
 #endif
 }
 
-void endTP()//ÊÍ·Å
+void endTP()//é‡Šæ”¾
 {
 #ifdef TOUCHPAD_SUPPORT
         free(tpreport);
 #endif
 }
 
-void readTP()//¶ÁÈ¡TP×´Ì¬
+void readTP()//è¯»å–TPçŠ¶æ€
 {
 #ifdef TOUCHPAD_SUPPORT
         touchpad_scan(tpreport);
 #endif
 }
 
-void readFullTP()//½øĞĞÑÓÊ±ºóÔÙ¶ÁÈ¡TP×´Ì¬
+void readFullTP()//è¿›è¡Œå»¶æ—¶åå†è¯»å–TPçŠ¶æ€
 {
 #ifdef TOUCHPAD_SUPPORT
         sleep(TOUCHPAD_DELAY); // lets the time to compute velocity
@@ -36,7 +36,7 @@ void readFullTP()//½øĞĞÑÓÊ±ºóÔÙ¶ÁÈ¡TP×´Ì¬
 #endif
 }
 
-int getX_Velocity()//¶ÁÈ¡XµÄÏà¶Ô×ø±ê
+int getX_Velocity()//è¯»å–Xçš„ç›¸å¯¹åæ ‡
 {
 #ifdef TOUCHPAD_SUPPORT
         if(!is_touchpad) return 0;
@@ -49,7 +49,7 @@ int getX_Velocity()//¶ÁÈ¡XµÄÏà¶Ô×ø±ê
 #endif
 }
 
-int getY_Velocity()//¶ÁÈ¡YµÄÏà¶Ô×ø±ê
+int getY_Velocity()//è¯»å–Yçš„ç›¸å¯¹åæ ‡
 {
 #ifdef TOUCHPAD_SUPPORT
         if(!is_touchpad) return 0;
@@ -62,7 +62,7 @@ int getY_Velocity()//¶ÁÈ¡YµÄÏà¶Ô×ø±ê
 #endif
 }
 
-int getX()//¶ÁÈ¡XµÄ¾ø¶Ô×ø±ê
+int getX()//è¯»å–Xçš„ç»å¯¹åæ ‡
 {
 #ifdef TOUCHPAD_SUPPORT
         if(!is_touchpad) return 0;
@@ -74,7 +74,7 @@ int getX()//¶ÁÈ¡XµÄ¾ø¶Ô×ø±ê
 #endif
 }
 
-int getY()//¶ÁÈ¡YµÄ¾ø¶Ô×ø±ê
+int getY()//è¯»å–Yçš„ç»å¯¹åæ ‡
 {
 #ifdef TOUCHPAD_SUPPORT
         if(!is_touchpad) return 0;
@@ -90,7 +90,7 @@ int getY()//¶ÁÈ¡YµÄ¾ø¶Ô×ø±ê
   456
    2
 */
-int getTouchedZone5()//°ÑTouchPad·Ö³É5¸öÇøÓò£¬¶ÁÈ¡Öµ
+int getTouchedZone5()//æŠŠTouchPadåˆ†æˆ5ä¸ªåŒºåŸŸï¼Œè¯»å–å€¼
 {
 #ifdef TOUCHPAD_SUPPORT
         if(!is_touchpad) return 0;
@@ -122,7 +122,7 @@ int getTouchedZone5()//°ÑTouchPad·Ö³É5¸öÇøÓò£¬¶ÁÈ¡Öµ
   4 6
    2
 */
-int getTouchedZone4()//°ÑTouchPad·Ö³É4¸öÇøÓò£¬¶ÁÈ¡Öµ
+int getTouchedZone4()//æŠŠTouchPadåˆ†æˆ4ä¸ªåŒºåŸŸï¼Œè¯»å–å€¼
 {
 #ifdef TOUCHPAD_SUPPORT
         if(!is_touchpad) return 0;
@@ -152,7 +152,7 @@ int getTouchedZone4()//°ÑTouchPad·Ö³É4¸öÇøÓò£¬¶ÁÈ¡Öµ
    456
    123
 */
-int getTouchedZone9()//°ÑTouchPad·Ö³É9¸öÇøÓò£¬¶ÁÈ¡Öµ
+int getTouchedZone9()//æŠŠTouchPadåˆ†æˆ9ä¸ªåŒºåŸŸï¼Œè¯»å–å€¼
 {
 #ifdef TOUCHPAD_SUPPORT
         if(!is_touchpad) return 0;
@@ -174,7 +174,7 @@ int getTouchedZone9()//°ÑTouchPad·Ö³É9¸öÇøÓò£¬¶ÁÈ¡Öµ
 #endif
 }
 
-int isTPTouched()//TPÊÇ·ñ±»´¥Ãş
+int isTPTouched()//TPæ˜¯å¦è¢«è§¦æ‘¸
 {
 #ifdef TOUCHPAD_SUPPORT
         return tpreport->contact;
@@ -183,7 +183,7 @@ int isTPTouched()//TPÊÇ·ñ±»´¥Ãş
 #endif
 }
 
-int isTPPressed()//TPÊÇ·ñ±»°´ÏÂ
+int isTPPressed()//TPæ˜¯å¦è¢«æŒ‰ä¸‹
 {
 #ifdef TOUCHPAD_SUPPORT
         return tpreport->pressed;
@@ -192,7 +192,7 @@ int isTPPressed()//TPÊÇ·ñ±»°´ÏÂ
 #endif
 }
 
-int isTouchpad()//ÊÇ·ñÓµÓĞTouchpad
+int isTouchpad()//æ˜¯å¦æ‹¥æœ‰Touchpad
 {
 #ifdef TOUCHPAD_SUPPORT
         return 1;

@@ -5,16 +5,16 @@ touchpad_report_t* tpreport;
 extern touchpad_info_t* tpinfo;
 #endif
 
-void initTP();//³õÊ¼»¯TP
-void endTP();//ÊÍ·Å
-void readTP();//¶ÁÈ¡TP×´Ì¬
-int getTouchedZone5();//°ÑTouchPad·Ö³É5¸öÇøÓò£¬¶ÁÈ¡Öµ
-int getTouchedZone4();//°ÑTouchPad·Ö³É4¸öÇøÓò£¬¶ÁÈ¡Öµ
-int getTouchedZone9();//°ÑTouchPad·Ö³É9¸öÇøÓò£¬¶ÁÈ¡Öµ
-int getX_Velocity();//¶ÁÈ¡XµÄÏà¶Ô×ø±ê
-int getY_Velocity();//¶ÁÈ¡YµÄÏà¶Ô×ø±ê
-int getX();//¶ÁÈ¡XµÄ¾ø¶Ô×ø±ê
-int getY();//¶ÁÈ¡YµÄ¾ø¶Ô×ø±ê
-int isTPTouched();//TPÊÇ·ñ±»´¥Ãş
-int isTPPressed();//TPÊÇ·ñ±»°´ÏÂ
-int isTouchPad();//ÊÇ·ñÓµÓĞTouchpad
+void initTP();//åˆå§‹åŒ–TP
+void endTP();//é‡Šæ”¾
+void readTP();//è¯»å–TPçŠ¶æ€
+int getTouchedZone5();//æŠŠTouchPadåˆ†æˆ5ä¸ªåŒºåŸŸï¼Œè¯»å–å€¼
+int getTouchedZone4();//æŠŠTouchPadåˆ†æˆ4ä¸ªåŒºåŸŸï¼Œè¯»å–å€¼
+int getTouchedZone9();//æŠŠTouchPadåˆ†æˆ9ä¸ªåŒºåŸŸï¼Œè¯»å–å€¼
+int getX_Velocity();//è¯»å–Xçš„ç›¸å¯¹åæ ‡
+int getY_Velocity();//è¯»å–Yçš„ç›¸å¯¹åæ ‡
+int getX();//è¯»å–Xçš„ç»å¯¹åæ ‡
+int getY();//è¯»å–Yçš„ç»å¯¹åæ ‡
+int isTPTouched();//TPæ˜¯å¦è¢«è§¦æ‘¸
+int isTPPressed();//TPæ˜¯å¦è¢«æŒ‰ä¸‹
+int isTouchPad();//æ˜¯å¦æ‹¥æœ‰Touchpad
